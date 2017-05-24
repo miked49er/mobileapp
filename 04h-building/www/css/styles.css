@@ -86,16 +86,39 @@ svg {
 h1, h2, h3, h4, h5, h6 {
   font-family: Teko, Sans-Serif;
   font-weight: bold;
-  color: #fff;
+  color: #00704a;
   font-size: 1.1rem;
+}
+
+h1, h2 {
+  line-height: 140%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  color: #00704a;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* line 24, ../lib/sass/_base.scss */
 a {
   text-decoration: none;
-  color: #fff;
+  color: #00704a;
   font-size: 1.1rem;
   line-height: 190%;
+}
+
+li {
+  text-align: center;
 }
 
 /* line 32, ../lib/sass/_base.scss */
@@ -1065,4 +1088,38 @@ svg .large-label {
 /* line 134, ../lib/sass/_infotab.scss */
 .tab-active section {
   right: 0;
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  border-radius: 50px;
+  width: 80%;
+  margin: 2rem 0;
+  padding: .2rem;
+  border: medium solid #63cae1;
+}
+
+@media (min-width: 30em) {
+  .app-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  .banner img {
+    width: 95%;
+    margin: 0;
+  }
 }
