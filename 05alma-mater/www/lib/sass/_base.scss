@@ -1,10 +1,10 @@
-@include font-face('Nova Mono', 'lib/fonts/NovaMono');
+@include font-face('Roboto', 'lib/fonts/Roboto/Roboto-Regular');
 @include font-face('Open Sans', 'lib/fonts/OpenSans-Regular');
 
 body {
   @include clearfix;
   font-family: $font-secondary;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 110%;
   background: rgb(230,230,230);
@@ -23,16 +23,16 @@ html, body {
 } // headings
 
 h1 {
-  color: #000;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 } // h1
 
 h2 {
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 30px;
-  text-align: center;
+  font-weight: bold;
+  line-height: 200%;
 } // h2
 
 h3 {
@@ -42,23 +42,11 @@ h3 {
   padding-bottom: 0;
 } // h3
 
-h4 {
-  font-size: 1.6rem;
-  line-height: 120%;
-  text-align: center;
-} // h4
-
-h5 {
-  color: #fff;
-  font-size: .9rem;
-  margin-bottom: 1.6rem;
-} // h5
-
 a {
+  color: $green;
   text-decoration: none;
-
-  &:hover {
-    color: #fff;
-    cursor:default;
-  } // hover
 } // a
+
+span {
+  font-weight: bold;
+} // span
