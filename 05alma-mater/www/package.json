@@ -1,0 +1,16 @@
+{
+  "name": "ggc-alma-mater",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "cordova run android",
+    "compile": "grunt js & grunt css"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.1.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
