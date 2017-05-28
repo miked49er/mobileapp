@@ -1,0 +1,32 @@
+.button {
+  @include box-shadow;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $green;
+  background-color: #fff;
+  line-height: 150%;
+  text-align: center;
+  padding: 8px 0;
+  margin: 1.5%;
+  float: left;
+
+  &:active {
+    background-color: $green;
+    color: #fff;
+  } // button:active
+} // button
+
+.hWidth {
+  width: 47%;
+} // hWidth
+
+.fWidth {
+  width: 97%;
+} // fWidth
+
+.selected {
+  // background-color: $green;
+  // color: #fff;
+  color: $blue;
+} // selected
