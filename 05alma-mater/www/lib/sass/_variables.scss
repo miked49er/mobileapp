@@ -1,4 +1,4 @@
-$font-primary : 'Nova Mono', monospace;
+$font-primary : Roboto, monospace;
 $font-secondary : 'Open Sans', sans-serif;
 
 $layout: gutter(4);
@@ -6,6 +6,13 @@ $layout: gutter(4);
 $green: #00704a;
 $grey: #a5acb0;
 $blue: #0b7cbc;
+
+$radius: 25px;
+
+$default-box-shadow-color: #333333;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 1px;
+$default-box-shadow-blur: 3px;
 
 $default-transition-property: all;
 $default-transition-duration: 1s;
