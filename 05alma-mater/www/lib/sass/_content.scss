@@ -11,8 +11,15 @@
 .content {
   display: block;
   width: 100%;
-  padding: 0px 5px;
+  padding: 0 3%;
+  padding-top: 12%;
   overflow: hidden;
+
+  img {
+    display: block;
+    width: 80%;
+    margin: 5% auto;
+  } // img
 } // content
 
 .section-line {
@@ -24,7 +31,6 @@
 .tracks {
   display: block;
   overflow: hidden;
-  padding-top: 12%;
   text-align: center;
 
   p {
