@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       }, // options
       my_target: {
         files: {
-          'public/js/script.min.js': ['lib/js/*.js']
+          'js/script.min.js': ['lib/js/*.js']
         } // files
       } // my_target
     }, // uglify
