@@ -109,18 +109,18 @@ html, body {
 /* line 20, ../lib/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, monospace;
-  color: #fff;
+  color: #000;
 }
 
 /* line 25, ../lib/sass/_base.scss */
 h1 {
+  color: #fff;
   text-align: center;
   font-size: 1.3rem;
 }
 
-/* line 30, ../lib/sass/_base.scss */
+/* line 31, ../lib/sass/_base.scss */
 h2 {
-  color: #000;
   font-size: 1.2rem;
   line-height: 30px;
   font-weight: bold;
@@ -129,19 +129,26 @@ h2 {
 
 /* line 38, ../lib/sass/_base.scss */
 h3 {
-  font-size: 1.4rem;
+  font-size: .9rem;
   line-height: 120%;
-  padding: 25px;
-  padding-bottom: 0;
+  font-weight: bold;
+  padding: 3% 0;
 }
 
 /* line 45, ../lib/sass/_base.scss */
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 130%;
+}
+
+/* line 51, ../lib/sass/_base.scss */
 a {
   color: #00704a;
   text-decoration: none;
 }
 
-/* line 50, ../lib/sass/_base.scss */
+/* line 56, ../lib/sass/_base.scss */
 span {
   font-weight: bold;
 }
@@ -193,37 +200,43 @@ body:after {
 .content {
   display: block;
   width: 100%;
-  padding: 0px 5px;
+  padding: 0 3%;
+  padding-top: 12%;
   overflow: hidden;
 }
-
 /* line 18, ../lib/sass/_content.scss */
+.content img {
+  display: block;
+  width: 80%;
+  margin: 5% auto;
+}
+
+/* line 25, ../lib/sass/_content.scss */
 .section-line {
   height: 1px;
   background-color: #a5acb0;
   margin: 2% 0;
 }
 
-/* line 24, ../lib/sass/_content.scss */
+/* line 31, ../lib/sass/_content.scss */
 .tracks {
   display: block;
   overflow: hidden;
-  padding-top: 12%;
   text-align: center;
 }
-/* line 30, ../lib/sass/_content.scss */
+/* line 36, ../lib/sass/_content.scss */
 .tracks p {
   padding-bottom: .2rem;
 }
 
-/* line 37, ../lib/sass/_content.scss */
+/* line 43, ../lib/sass/_content.scss */
 .lyrics p {
   line-height: 180%;
   font-size: 1.1rem;
   font-weight: normal;
 }
 
-/* line 44, ../lib/sass/_content.scss */
+/* line 50, ../lib/sass/_content.scss */
 .position {
   line-height: 130%;
 }
