@@ -1,10 +1,7 @@
 var selectedButton = 'selected';
-var timecode = 0;
 var length = 0;
-
-function log(msg) {
-  console.log(msg);
-}
+var alma;
+var mediaTimer;
 
 function getLyrics() {
   var elem = document.getElementsByClassName(selectedButton)[0];
@@ -12,11 +9,12 @@ function getLyrics() {
   switch (elem.id) {
     case 'instrumental':
       lyrics = [
-        {delta: 0, lyric: '[Introduction]'},
+        {delta: 0, lyric: '--'},
+        {delta: 3, lyric: '[Introduction]'},
         {delta: 8, lyric: 'We have gained wisdom and honor'},
         {delta: 13, lyric: 'From our home of green and grey'},
         {delta: 17, lyric: 'We will go forth and remember'},
-        {delta: 22, lyric: 'All we\'ve learned along the way'},
+        {delta: 21, lyric: 'All we\'ve learned along the way'},
         {delta: 25, lyric: 'And with knowledge and compassion'},
         {delta: 29, lyric: 'We will build communities'},
         {delta: 34, lyric: 'Leading by example'},
@@ -30,11 +28,12 @@ function getLyrics() {
       break;
     case 'low':
       lyrics = [
-        {delta: 0, lyric: '[Introduction]'},
+        {delta: 0, lyric: '--'},
+        {delta: 3, lyric: '[Introduction]'},
         {delta: 8, lyric: 'We have gained wisdom and honor'},
         {delta: 13, lyric: 'From our home of green and grey'},
         {delta: 17, lyric: 'We will go forth and remember'},
-        {delta: 22, lyric: 'All we\'ve learned along the way'},
+        {delta: 21, lyric: 'All we\'ve learned along the way'},
         {delta: 25, lyric: 'And with knowledge and compassion'},
         {delta: 29, lyric: 'We will build communities'},
         {delta: 34, lyric: 'Leading by example'},
@@ -48,7 +47,8 @@ function getLyrics() {
       break;
     case 'high':
       lyrics = [
-        {delta: 0, lyric: '[Introduction]'},
+        {delta: 0, lyric: '--'},
+        {delta: 3, lyric: '[Introduction]'},
         {delta: 11, lyric: 'We have gained wisdom and honor'},
         {delta: 14, lyric: 'From our home of green and grey'},
         {delta: 19, lyric: 'We will go forth and remember'},
@@ -66,7 +66,8 @@ function getLyrics() {
       break;
     case 'vocal':
       lyrics = [
-        {delta: 0, lyric: '[Introduction]'},
+        {delta: 0, lyric: '--'},
+        {delta: 3, lyric: '[Introduction]'},
         {delta: 12, lyric: 'We have gained wisdom and honor'},
         {delta: 16, lyric: 'From our home of green and grey'},
         {delta: 20, lyric: 'We will go forth and remember'},
@@ -84,7 +85,8 @@ function getLyrics() {
       break;
     default:
       lyrics = [
-        {delta: 0, lyric: '[Introduction]'},
+        {delta: 0, lyric: '--'},
+        {delta: 3, lyric: '[Introduction]'},
         {delta: 8, lyric: 'We have gained wisdom and honor'},
         {delta: 13, lyric: 'From our home of green and grey'},
         {delta: 17, lyric: 'We will go forth and remember'},
@@ -104,6 +106,10 @@ function getLyrics() {
   return lyrics;
 }
 
+function getMediaURL(s) {
+    return "/android_asset/www/" + s;
+}
+
 function updateSelected(id) {
   var buttons = document.getElementsByClassName(selectedButton);
 
@@ -120,7 +126,7 @@ function updatePos(delta, state) {
   pos.innerHTML = '<span>Position:</span> ' + delta + '/' + length + ' (' + state + ')';
 
   var tick = document.getElementsByClassName('tick')[0];
-  tick.width = (delta / length) * 100 + '%';
+  tick.style.width = (delta / length) * 100 + '%';
 
   var lyrics = getLyrics();
   var curLyric = 0;
@@ -137,7 +143,13 @@ function updatePos(delta, state) {
   current.innerHTML = lyrics[curLyric].lyric;
   if (curLyric > 0) {
     previous.innerHTML = lyrics[curLyric-1].lyric;
-    next.innerHTML = lyrics[curLyric + 1].lyric;
+    if (curLyric >= lyrics.length - 1) {
+      console.log('==');
+      next.innerHTML = '--';
+    }
+    else {
+      next.innerHTML = lyrics[curLyric + 1].lyric;
+    }
   }
   else {
     previous.innerHTML = '--';
@@ -147,14 +159,26 @@ function updatePos(delta, state) {
 
 function instrumental() {
   updateSelected('instrumental');
-  var music = 'lib/music/Alma Mater PIano.mp3';
+  var music = getMediaURL('lib/music/Alma\ Mater\ PIano.mp3');
+  alma.release();
+  alma = new Media(
+    music,
+    function () { console.log('media success'); },
+    function (err) { console.log('media failure: ' + err.code); }
+  );
   length = 93;
   updatePos(0, '-');
 }
 
 function lowVocal() {
   updateSelected('low');
-  var music = 'lib/music/Alma Mater PIano.mp3';
+  var music = getMediaURL('lib/music/Alma\ Mater\ Complete\ Low.mp3');
+  alma.release();
+  alma = new Media(
+    music,
+    function () { console.log('media success'); },
+    function (err) { console.log('media failure: ' + err.code); }
+  );
   length = 89;
 
   updatePos(0, '-');
@@ -162,7 +186,13 @@ function lowVocal() {
 
 function highVocal() {
   updateSelected('high');
-  var music = 'lib/music/Alma Mater PIano.mp3';
+  var music = getMediaURL('lib/music/Alma\ Mater\ Complete\ High.mp3');
+  alma.release();
+  alma = new Media(
+    music,
+    function () { console.log('media success'); },
+    function (err) { console.log('media failure: ' + err.code); }
+  );
   length = 89;
 
   updatePos(0, '-');
@@ -170,22 +200,54 @@ function highVocal() {
 
 function vocal() {
   updateSelected('vocal');
-  var music = 'lib/music/Alma Mater PIano.mp3';
+  var music = getMediaURL('lib/music/Alma\ Mater\ Melody.mp3');
+  alma.release();
+  alma = new Media(
+    music,
+    function () { console.log('media success'); },
+    function (err) { console.log('media failure: ' + err.code); }
+  );
   length = 91;
 
   updatePos(0, '-');
 }
 
 function trackPlay() {
-  log('play');
+  alma.play();
+  mediaTimer = setInterval( function () {
+    alma.getCurrentPosition(
+      function (pos) {
+        if (pos > -1) {
+          updatePos(Math.floor(pos), 'playing');
+        }
+      },
+      function (e) {
+        console.log('Error getting pos=' + e);
+      }
+    );
+  }, 1000);
 }
 
 function trackPause() {
-  log('pause');
+  alma.pause();
+  clearInterval(mediaTimer);
+  alma.getCurrentPosition(
+    function (pos) {
+      if (pos > -1) {
+        updatePos(Math.floor(pos), 'paused');
+      }
+    },
+    function (e) {
+      console.log('Error getting pos=' + e);
+    }
+  );
 }
 
 function trackStop() {
-  log('stop');
+  alma.stop();
+  alma.release();
+  clearInterval(mediaTimer);
+  updatePos(0, 'stopped');
 }
 
 function setupEventListeners() {
@@ -197,13 +259,18 @@ function setupEventListeners() {
   document.getElementById('play').addEventListener('click', trackPlay);
   document.getElementById('pause').addEventListener('click', trackPause);
   document.getElementById('stop').addEventListener('click', trackStop);
+  alma = new Media(
+    getMediaURL('lib/music/Alma\ Mater\ PIano.mp3'),
+    function () { console.log('media success'); },
+    function (err) { console.log('media failure: ' + err.code); }
+  );
   instrumental();
 }
 
 var app = {
     // Application Constructor
     initialize: function() {
-      setupEventListeners();
+      document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
     // deviceready Event Handler
@@ -211,6 +278,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+      setupEventListeners();
     },
 
     // Update DOM on a Received Event
