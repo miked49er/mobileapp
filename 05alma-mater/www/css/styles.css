@@ -238,12 +238,12 @@ body:after {
 .lyrics #previous, .lyrics #next {
   color: gray;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 /* line 53, ../lib/sass/_content.scss */
 .lyrics #current {
   color: #000;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -301,8 +301,12 @@ body:after {
   color: #00704a;
   margin: 0 3%;
 }
+/* line 11, ../lib/sass/_media.scss */
+.media-controls i:active {
+  color: #0b7cbc;
+}
 
-/* line 13, ../lib/sass/_media.scss */
+/* line 17, ../lib/sass/_media.scss */
 .progress {
   display: block;
   background-color: #00704a;
@@ -311,7 +315,7 @@ body:after {
   height: 10px;
   margin: 1.5% 0;
 }
-/* line 21, ../lib/sass/_media.scss */
+/* line 25, ../lib/sass/_media.scss */
 .progress .tick {
   background-color: #0b7cbc;
   width: 0;
