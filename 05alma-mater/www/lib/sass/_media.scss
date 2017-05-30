@@ -7,6 +7,10 @@
   i {
     color: $green;
     margin: 0 3%;
+
+    &:active {
+      color: $blue;
+    } // i:active
   } // i
 } // media-controls
 
