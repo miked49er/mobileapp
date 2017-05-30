@@ -97,29 +97,30 @@ body {
   line-height: 110%;
   background: #e6e6e6;
   overflow: hidden;
+  cursor: default;
 }
 
-/* line 14, ../lib/sass/_base.scss */
+/* line 15, ../lib/sass/_base.scss */
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
 }
 
-/* line 20, ../lib/sass/_base.scss */
+/* line 21, ../lib/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, monospace;
   color: #000;
 }
 
-/* line 25, ../lib/sass/_base.scss */
+/* line 26, ../lib/sass/_base.scss */
 h1 {
   color: #fff;
   text-align: center;
   font-size: 1.3rem;
 }
 
-/* line 31, ../lib/sass/_base.scss */
+/* line 32, ../lib/sass/_base.scss */
 h2 {
   font-size: 1.2rem;
   line-height: 30px;
@@ -127,7 +128,7 @@ h2 {
   line-height: 200%;
 }
 
-/* line 38, ../lib/sass/_base.scss */
+/* line 39, ../lib/sass/_base.scss */
 h3 {
   font-size: .9rem;
   line-height: 120%;
@@ -135,20 +136,20 @@ h3 {
   padding: 3% 0;
 }
 
-/* line 45, ../lib/sass/_base.scss */
+/* line 46, ../lib/sass/_base.scss */
 h4 {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   line-height: 130%;
 }
 
-/* line 51, ../lib/sass/_base.scss */
+/* line 52, ../lib/sass/_base.scss */
 a {
   color: #00704a;
   text-decoration: none;
 }
 
-/* line 56, ../lib/sass/_base.scss */
+/* line 57, ../lib/sass/_base.scss */
 span {
   font-weight: bold;
 }
@@ -232,11 +233,21 @@ body:after {
 /* line 43, ../lib/sass/_content.scss */
 .lyrics p {
   line-height: 180%;
-  font-size: 1.1rem;
+}
+/* line 47, ../lib/sass/_content.scss */
+.lyrics #previous, .lyrics #next {
+  color: gray;
   font-weight: normal;
+  font-size: 1rem;
+}
+/* line 53, ../lib/sass/_content.scss */
+.lyrics #current {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
-/* line 50, ../lib/sass/_content.scss */
+/* line 60, ../lib/sass/_content.scss */
 .position {
   line-height: 130%;
 }
@@ -303,7 +314,7 @@ body:after {
 /* line 21, ../lib/sass/_media.scss */
 .progress .tick {
   background-color: #0b7cbc;
-  width: 33%;
+  width: 0;
   height: 100%;
   border-radius: 25px;
 }
