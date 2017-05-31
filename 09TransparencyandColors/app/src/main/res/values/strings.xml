@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Transparency/Colors App</string>
+    <string name="transparency">Transparency</string>
+    <string name="color">Color</string>
+
+    <string-array name="color_group">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+</resources>
