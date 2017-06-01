@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">H Building Maps</string>
+    <string name="campus_title">Campus Map</string>
+    <string name="floor1">First Floor</string>
+    <string name="floor2">Second Floor</string>
+    <string name="floor3">Third Floor</string>
+    <string name="campus">Campus</string>
+    <string name="about">About</string>
+
+    <string name="h_building_caption">Health and Science Building</string>
+</resources>
