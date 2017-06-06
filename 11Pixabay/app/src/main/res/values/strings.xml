@@ -2,4 +2,12 @@
     <string name="app_name">Pixabay Sampler</string>
     <string name="action_about">About</string>
     <string name="temp_image">View Content Discription</string>
+
+    <string name="created">Created by Mike Deiters</string>
+    <string name="class_title">ITEC 4550</string>
+    <string name="date">June 6, 2017</string>
+    <string name="credits">Credits</string>
+
+    <string name="profile_cap">Mike Deiters</string>
+    <string name="pixabay">Pixabay Logo</string>
 </resources>

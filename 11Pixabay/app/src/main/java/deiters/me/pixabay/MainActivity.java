@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String service = "https://pixabay.com/api/";
-                String key = "5555459-b4fbd09dbba0b6b6dd5a296ee";
+                String key = "key=5555459-b4fbd09dbba0b6b6dd5a296ee";
                 String query_params = "&editors_choice=true&safesearch=true&image_type=photos";
                 String urlString = service + "?" + key + query_params;
                 PixabayFetchTask task = new PixabayFetchTask();
@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 URL url = new URL(params[0]);
+
+
                 JSONObject json = new JSONObject();
                 Log.v("Pixabay", "json = " + json);
             } catch (MalformedURLException e) {
