@@ -1,11 +1,27 @@
 <resources>
     <string name="app_name">H Building Maps</string>
+
     <string name="campus_title">Campus Map</string>
-    <string name="floor1">First Floor</string>
-    <string name="floor2">Second Floor</string>
-    <string name="floor3">Third Floor</string>
+    <string name="first_title">H Building First Floor</string>
+    <string name="second_title">H Building Second Floor</string>
+    <string name="third_title">H Building Third Floor</string>
+    <string name="about_title">About</string>
+
+    <string name="floor1">1st Floor</string>
+    <string name="floor2">2nd Floor</string>
+    <string name="floor3">3rd Floor</string>
     <string name="campus">Campus</string>
     <string name="about">About</string>
 
     <string name="h_building_caption">Health and Science Building</string>
+    <string name="campus_caption">GGC Campus Map</string>
+    <string name="first_caption">H Building First Floor Map</string>
+    <string name="second_caption">H Building Second Floor Map</string>
+    <string name="third_caption">H Building Third Floor Map</string>
+    <string name="about_caption">GGC Library</string>
+
+    <string name="mike">Mike Deiters</string>
+    <string name="date">June 2, 2017</string>
+    <string name="about_class">ITEC 4550</string>
+
 </resources>
