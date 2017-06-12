@@ -1,0 +1,16 @@
+{
+  "requests": [
+    {
+      "image": {
+        "source": {
+          "imageUri": "https://cloud.google.com/vision/images/rushmore.jpg"
+        }
+      },
+      "features": [
+        {
+          "type": "LABEL_DETECTION"
+        }
+      ]
+    }
+  ]
+}
