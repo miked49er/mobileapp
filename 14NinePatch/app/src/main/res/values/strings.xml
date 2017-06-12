@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Nine Patch</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium Text</string>
+    <string name="big_text">Big Text</string>
+    <string name="long_text">Hello World. This is long text</string>
+    <string name="big_long">This is some big and long text button</string>
+    <string name="small_long">I am a tiny long text</string>
+</resources>
