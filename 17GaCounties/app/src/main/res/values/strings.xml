@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ga Counties</string>
+
+    <string name="about">About</string>
+    <string name="cap">Atlanta Skyline</string>
+    <string name="itec">ITEC 4550</string>
+    <string name="created">Created June 13th, 2017 by</string>
+    <string name="name">Mike Deiters</string>
+
+    <string name="gwinnett">Gwinnett</string>
+    <string name="cobb">Cobb</string>
+    <string name="fulton">Fulton</string>
+    <string name="clarke">Clarke</string>
+
+    <string name="gwinnettC">Gwinnett County</string>
+    <string name="cobbC">Cobb County</string>
+    <string name="fultonC">Fulton County</string>
+    <string name="clarkeC">Clarke County</string>
+</resources>

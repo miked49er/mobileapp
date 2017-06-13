@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.deiters.gacounties.MainActivity">
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cobb" />
+
+    <Button
+        android:id="@+id/gwinnett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gwinnett"
+        app:layout_constraintBottom_toTopOf="@+id/cobb"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fulton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fulton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fulton"
+        app:layout_constraintBottom_toTopOf="@+id/clarke"
+        app:layout_constraintLeft_toRightOf="@+id/gwinnett"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cobb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cobb"
+        app:layout_constraintBottom_toTopOf="@+id/about"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/clarke"
+        app:layout_constraintTop_toBottomOf="@+id/gwinnett" />
+
+    <Button
+        android:id="@+id/clarke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clarke"
+        app:layout_constraintBottom_toTopOf="@+id/about"
+        app:layout_constraintLeft_toRightOf="@+id/cobb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fulton" />
+
+</android.support.constraint.ConstraintLayout>
