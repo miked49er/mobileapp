@@ -1,4 +1,4 @@
-package edu.ggc.lutz.grizzlyvision;
+package me.deiters.mike.grizzlyvision;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
