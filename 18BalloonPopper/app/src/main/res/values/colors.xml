@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lightGrey">#DDDDDD</color>
+    <color name="pinColor">@color/black_overlay</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="ballon1">#00704a</color>
+    <color name="ballon2">#a5acb0</color>
+    <color name="yellow">#f5e100</color>
+</resources>
