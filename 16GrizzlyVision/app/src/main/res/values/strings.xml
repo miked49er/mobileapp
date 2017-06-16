@@ -7,11 +7,11 @@
     <string name="loading_message">Uploading image. Please wait.</string>
 
     <string name="temp_image">View Content Description</string>
-    <string name="describe">Flip you device face down, and then flip back up to view a new editor\'s choice image from pixabay.</string>
+    <string name="describe">Grizzly Vision utilizes two services, Pixabay and Google\'s Cloud Vision API. The app fetches editor\'s choice images from Pxabay, and analyzes them with the Vision API to compare the author\'s image tag to what Google\'s Cloud thinks it sees.</string>
 
     <string name="created">Created by Mike Deiters</string>
     <string name="class_title">ITEC 4550</string>
-    <string name="date">June 6, 2017</string>
+    <string name="date">June 16, 2017</string>
     <string name="credits">Credits</string>
 
     <string name="profile_cap">Mike Deiters</string>
